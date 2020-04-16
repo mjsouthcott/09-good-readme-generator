@@ -21,7 +21,7 @@ This is a command line application that takes user input and generates a README 
 
 ## Installation
 
-To install the application, fork the repository and open it in Visual Studio Code. Open a Terminal windows and navigate to the root folder. Once there, use `npm install` to install of the dependencies and then `node app.js` to run the application. Follow the prompts to create a new README.
+To install the application, fork the repository and open it in Visual Studio Code. In the Terminal window, navigate to the root folder. Once there, use `npm install` to install of the dependencies and then `node app.js` to run the application. Follow the prompts to create a new README.
 
 ## Usage
 
