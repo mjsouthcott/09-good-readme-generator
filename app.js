@@ -51,6 +51,7 @@ async function generateREADME() {
   tableOfContents.forEach(function (item) {
     newREADME += `* ${item}\n`;
   });
+  newREADME += `\n`;
 
   // If user selected "Installation", ask for installation instructions
   if (tableOfContents.includes("Installation")) {
@@ -58,7 +59,7 @@ async function generateREADME() {
       message: "Enter the installation instructions:",
       name: "installation",
     });
-    newREADME += `\n## Installation\n\n${installation}\n\n`;
+    newREADME += `## Installation\n\n${installation}\n\n`;
   }
 
   // If user selected "Usage", ask for use instructions
@@ -110,6 +111,7 @@ async function generateREADME() {
     tests.split(";").forEach(function (item) {
       newREADME += `* ${item.trim()}\n`;
     });
+    newREADME += `\n`;
   }
 
   // If user selected "Questions", ask for questions
@@ -118,14 +120,15 @@ async function generateREADME() {
       message: "Enter the questions (separate questions with semicolons):",
       name: "questions",
     });
-    newREADME += `\n## Questions\n\n`;
+    newREADME += `## Questions\n\n`;
     questions.split(";").forEach(function (item) {
       newREADME += `* ${item.trim()}\n`;
     });
+    newREADME += `\n`;
   }
 
   // Add followers badge
-  newREADME += `\n## Badges\n\n![GitHub followers](https://img.shields.io/github/followers/${GitHubUsername}?label=Follow&style=social)`;
+  newREADME += `## Badges\n\n![GitHub followers](https://img.shields.io/github/followers/${GitHubUsername}?label=Follow&style=social)`;
 
   // Write README to file
   writeFileP("newREADME.md", newREADME, function (err) {
