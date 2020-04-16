@@ -8,7 +8,7 @@ GitHub Username: mjsouthcott
 
 ## Description
 
-This is a command line application that takes user input and generates a README that follows all of the best practices described in the [Good README Guide](https://carleton.bootcampcontent.com/carleton-university/CARL-OTT-FSF-PT-02-2020-U-C/blob/master/01-HTML-Git-CSS/04-Supplemental/Good-README-Guide/README.md). It uses Javascript, Node.js and various dependencies, such as axios and inquirer.  This README was created using the application - how meta!
+This is a command line application that takes user input and generates a README that follows all of the best practices described in the [Good README Guide](https://carleton.bootcampcontent.com/carleton-university/CARL-OTT-FSF-PT-02-2020-U-C/blob/master/01-HTML-Git-CSS/04-Supplemental/Good-README-Guide/README.md). It uses Javascript, Node.js and various dependencies, such as axios and inquirer.  This README was (largely) generated using the application - how meta!
 
 ## Table of Contents
 
