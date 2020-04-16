@@ -1,6 +1,10 @@
 # Project 1
 
-## Description
+## Owner
+
+mjsouthcott
+
+![Git Hub Avatar](https://avatars2.githubusercontent.com/u/52112919?v=4)## Description
 
 a description
 
@@ -40,8 +44,9 @@ contribute to it
 ## Tests
 
 * test 1
-*  test 2
-*  test 3
+* test 2
+* test 3
+
 ## Questions
 
 * question 1

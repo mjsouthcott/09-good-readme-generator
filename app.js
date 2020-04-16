@@ -14,14 +14,17 @@ async function generateREADME() {
     name: "GitHubUsername",
   });
 
-  // TODO: use GitHub API to get user's photo
+  // Use GitHub API to get URL for user's avatar
+  const queryURL = `https://api.github.com/users/${GitHubUsername}/repos?per_page=100`;
+  const res = await axios.get(queryURL);
+  GitHubAvatarURL = res.data[0].owner.avatar_url;
 
   // Ask for project title
   const { title } = await inquirer.prompt({
     message: "Enter your project title:",
     name: "title",
   });
-  newREADME += `# ${title}\n\n`;
+  newREADME += `# ${title}\n\n## Owner\n\nGitHub Username: ${GitHubUsername}\n\n![Git Hub Avatar](${GitHubAvatarURL})\n\n`;
 
   // Ask for project description
   const { description } = await inquirer.prompt({
