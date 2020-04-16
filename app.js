@@ -103,7 +103,7 @@ async function generateREADME() {
   // If user selected "Tests", ask for tests
   if (tableOfContents.includes("Tests")) {
     const { tests } = await inquirer.prompt({
-      message: "Enter the tests (separate items with semicolons):",
+      message: "Enter the tests (separate tests with semicolons):",
       name: "tests",
     });
     newREADME += `## Tests\n\n`;
@@ -115,7 +115,7 @@ async function generateREADME() {
   // If user selected "Questions", ask for questions
   if (tableOfContents.includes("Questions")) {
     const { questions } = await inquirer.prompt({
-      message: "Enter the questions (separate items with semicolons):",
+      message: "Enter the questions (separate questions with semicolons):",
       name: "questions",
     });
     newREADME += `\n## Questions\n\n`;
@@ -123,6 +123,9 @@ async function generateREADME() {
       newREADME += `* ${item.trim()}\n`;
     });
   }
+
+  // Add followers badge
+  newREADME += `\n## Badges\n\n![GitHub followers](https://img.shields.io/github/followers/${GitHubUsername}?label=Follow&style=social)`;
 
   // Write README to file
   writeFileP("newREADME.md", newREADME, function (err) {
