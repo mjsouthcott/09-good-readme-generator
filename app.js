@@ -19,6 +19,11 @@ async function generateREADME() {
   const res = await axios.get(queryURL);
   GitHubAvatarURL = res.data[0].owner.avatar_url;
 
+  const { repositoryName } = await inquirer.prompt({
+    message: "Enter the repository name:",
+    name: "repositoryName",
+  });
+
   // Ask for project title
   const { title } = await inquirer.prompt({
     message: "Enter your project title:",
@@ -49,7 +54,7 @@ async function generateREADME() {
   });
   newREADME += `## Table of Contents\n\n`;
   tableOfContents.forEach(function (item) {
-    newREADME += `* ${item}\n`;
+    newREADME += `* [${item}](https://github.com/mjsouthcott/${repositoryName}#${item})\n`;
   });
   newREADME += `\n`;
 
